@@ -21,6 +21,7 @@ gulp.task(
   'compile-es6',
   () => {
     gulp.src('src/*.js')
+        .pipe($.plumber())
         .pipe($.babel())
         .pipe(gulp.dest('app'))
   }
