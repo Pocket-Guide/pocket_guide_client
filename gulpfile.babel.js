@@ -8,7 +8,7 @@ gulp.task(
     'clean',
     'compile-es6',
     'compile-html',
-    'compile-scss'
+    'compile-sass'
   ]
 );
 
@@ -41,8 +41,11 @@ gulp.task(
   'compile-sass',
   () => {
     gulp.src('src/stylesheets/**/*')
+        .pipe($.plumber())
         .pipe($.sourcemaps.init())
-        .pipe($.sass())
+        .pipe($.sass({
+          includePaths: require('node-bourbon').includePaths
+        }))
         .pipe($.sourcemaps.write())
         .pipe(gulp.dest('app/stylesheets'))
   }
