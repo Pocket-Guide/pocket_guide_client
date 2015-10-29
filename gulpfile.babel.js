@@ -1,23 +1,34 @@
 var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
 
 gulp.task(
   'default',
   [
-    'compile-html'
+    'compile-html',
+    'compile-es6'
   ]
 );
 
 gulp.task(
   'compile-html',
-  function(){
+  () => {
     gulp.src('src/*.html')
         .pipe(gulp.dest('app'))
   }
 );
 
 gulp.task(
+  'compile-es6',
+  () => {
+    gulp.src('src/*.js')
+        .pipe($.babel())
+        .pipe(gulp.dest('app'))
+  }
+);
+
+gulp.task(
   'watch',
-  function(){
+  () => {
     gulp.watch('src/*', ['default'])
   }
 );
