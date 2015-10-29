@@ -6,8 +6,9 @@ gulp.task(
   'compile',
   [
     'clean',
+    'compile-es6',
     'compile-html',
-    'compile-es6'
+    'compile-scss'
   ]
 );
 
@@ -35,6 +36,17 @@ gulp.task(
         .pipe(gulp.dest('app'));
   }
 );
+
+gulp.task(
+  'compile-sass',
+  () => {
+    gulp.src('src/stylesheets/**/*')
+        .pipe($.sourcemaps.init())
+        .pipe($.sass())
+        .pipe($.sourcemaps.write())
+        .pipe(gulp.dest('app/stylesheets'))
+  }
+)
 
 gulp.task(
   'watch',
