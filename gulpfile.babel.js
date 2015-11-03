@@ -40,7 +40,7 @@ gulp.task(
 gulp.task(
   'compile-sass',
   () => {
-    gulp.src('src/stylesheets/**/*')
+    gulp.src('src/stylesheets/application.scss')
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
         .pipe($.sass({
