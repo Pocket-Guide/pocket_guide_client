@@ -25,6 +25,7 @@
     "react-redux": "^2.1.2",
     "react-router": "^0.13.4",
     "redux": "^3.0.0",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
   }
 }
