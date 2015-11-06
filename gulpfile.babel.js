@@ -20,14 +20,6 @@ gulp.task(
 )
 
 gulp.task(
-  'compile-html',
-  () => {
-    gulp.src('src/**/*.html')
-        .pipe(gulp.dest('app'));
-  }
-);
-
-gulp.task(
   'compile-es6',
   () => {
     gulp.src('src/**/*.js')
