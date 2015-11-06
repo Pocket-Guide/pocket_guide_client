@@ -1,8 +1,39 @@
-.main_header{
-  height: 50px;
-  width: 100%;
+#header{
+  background: #444;
+  color: white;
+  cursor: default;
+  height: 5.5em;
+  left: 0;
   position: fixed;
-  background-color: #258ec9;
-  top: 0;
-  z-index: 90;
+  top: 0px;
+  width: 100%;
+  line-height: 5em;
+  h1{
+    font-size: 2em;
+    position: absolute;
+    height: inherit;
+    left: 1.25em;
+    margin: 0;
+    padding: 0;
+    top: 0.5em;
+    margin-top: 10px;
+  }
+  ul {
+    position: absolute;
+    right: 0;
+    list-style: none;
+    li{
+      font-size: 1.5em;
+      margin-right: 1em;
+      display: inline-block;
+      a {
+        padding: 0.2em 1em;
+        color: white;
+        border-radius: 6px;
+        line-height: 1.95em;
+        height: 1.5em;
+        border: solid 3px #cccccc;
+      }
+    }
+  }
 }
