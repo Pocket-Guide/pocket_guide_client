@@ -1,10 +1,6 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var del = require('del');
 var $ = require('gulp-load-plugins')();
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
 
 gulp.task(
   'compile',
@@ -55,23 +51,9 @@ gulp.task(
   }
 )
 
-gulp.task('dev-server',
-  (callback) => {
-    new WebpackDevServer(webpack(config), {
-      publicPath: config.output.publicPath,
-      stats: {
-        color:true
-      }
-    }).listen(8080, 'localhost', (err) => {
-      if (err) throw new gutil.PluginError('webpack-dev-server', err);
-      console.log("Listening at Localhost:8080")
-    });
+gulp.task(
+  'watch',
+  () => {
+    gulp.watch('src/**/*', ['compile']);
   }
 );
-
-gulp.task('watch-compile', () => {
-  gulp.watch('src/**/*', ['compile']);
-});
-
-
-gulp.task('default', ['watch-compile', 'dev-server']);
