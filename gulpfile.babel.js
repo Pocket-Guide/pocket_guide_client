@@ -7,7 +7,6 @@ gulp.task(
   [
     'clean',
     'compile-es6',
-    'compile-html',
     'compile-sass'
   ]
 );

@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "node server js",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",
@@ -26,8 +27,12 @@
     "react": "^0.13.3",
     "react-redux": "^2.1.2",
     "react-router": "^0.13.5",
+    "react-transform-webpack-hmr": "^0.1.6",
     "redux": "^3.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "history": "^1.13.0"
   }
 }

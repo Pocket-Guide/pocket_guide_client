@@ -9,8 +9,12 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'app'),
+    publicPath: "/assets/",
     filename: '[name].js'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders:[
       {
