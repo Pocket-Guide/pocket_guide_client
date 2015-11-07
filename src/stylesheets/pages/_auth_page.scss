@@ -6,7 +6,8 @@
   width:100%;
   float:left;
   padding-top:0px;
-
+  position: absolute;
+  top: 110px;
   #form-div {
     background-color:rgba(72,72,72,0.4);
     padding-left:35px;
@@ -21,6 +22,11 @@
     margin-left: -260px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    h2{
+      font-size: 3em;
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
 
     .feedback-input {
       color:#3c3c3c;

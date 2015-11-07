@@ -14,6 +14,12 @@ export default class SignInForm extends Component {
               <p class="email">
                 <input name="email" type="text" className="feedback-input" id="email" placeholder="Email" />
               </p>
+              <p class="password">
+                <input name="password" type="text" className="feedback-input" id="password" placeholder="Password" />
+              </p>
+              <p class="password_confirmation">
+                <input name="password_confirmation" type="text" className="feedback-input" id="password" placeholder="Password Confirmation" />
+              </p>
               <div class="submit">
                 <input type="submit" value="SEND" id="button-blue"/>
                 <div class="ease"></div>
