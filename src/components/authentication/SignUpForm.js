@@ -6,7 +6,7 @@ export default class SignInForm extends Component {
       <div id="banner">
         <div id="form-main">
           <div id="form-div">
-            <h2>Sign In</h2>
+            <h2>Sign Up</h2>
             <form className="form" id="form1">
               <p className="name">
                 <input name="name" type="text" className="feedback-input" placeholder="Name" id="name" />

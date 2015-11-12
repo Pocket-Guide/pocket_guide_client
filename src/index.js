@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStore } from 'redux';
+import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import App from './containers/App';
@@ -8,7 +8,7 @@ import AuthenticationPage from './containers/AuthenticationPage'
 import rootReducer from './reducers';
 import { Router, Route, RouteHandler, IndexRoute } from 'react-router';
 
-const store = createStore(rootReducer)
+const store = configureStore()
 const history = createBrowserHistory();
 
 const routes = (
