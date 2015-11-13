@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { reduxForm } from 'redux-form';
+import { connectReduxForm } from 'redux-form';
 
 let SignInForm = class SignInForm extends Component {
   render() {
@@ -17,7 +17,7 @@ let SignInForm = class SignInForm extends Component {
                 <input type="email" name="email" className="feedback-input" id="email" placeholder="Email" {...email} />
               </p>
               <div class="submit">
-              <button id="button-blue" onClick={handleSubmit}>Submit</button>
+                <button id="button-blue" onClick={handleSubmit} >Submit</button>
                 <div class="ease"></div>
               </div>
             </form>
@@ -33,9 +33,9 @@ SignInForm.propTypes = {
   fields: PropTypes.object.isRequired
 };
 
-SignInForm = reduxForm({
+SignInForm = connectReduxForm({
   form: "auth",
-  fields: ["name", "email"]
+  fields: ['name', 'email'],
 })(SignInForm);
 
 export default SignInForm;

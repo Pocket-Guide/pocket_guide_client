@@ -30,7 +30,7 @@
     "react-transform-webpack-hmr": "^0.1.6",
     "redux": "^3.0.0",
     "redux-api": "^0.6.8",
-    "redux-form": "^3.0.6",
+    "redux-form": "^2.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
