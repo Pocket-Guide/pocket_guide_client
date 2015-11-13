@@ -3,28 +3,31 @@ import { connect } from 'react-redux';
 import SignInForm from '../components/authentication/SignInForm'
 import SignUpForm from '../components/authentication/SignUpForm'
 
-
-function mapStateToProps(state, ownProps) {
-  let pathProps = ownProps.location.pathname
-  return {
-    pathProps,
-    state
-  }
-}
-
 class AuthenticationPage extends Component{
+  handleSignInSubmit(data) {
+    console.log(data)
+  }
+
   render(){
     let form;
     if (this.props.pathProps === "/sign_up") {
       form = < SignUpForm />
     } else {
-      form = < SignInForm />
+      form = < SignInForm onSubmit={ this.handleSignInSubmit.bind(this) }/>
     }
     return(
       <div>
         { form }
       </div>
     );
+  }
+}
+
+function mapStateToProps(state, ownProps) {
+  let pathProps = ownProps.location.pathname
+  return {
+    pathProps,
+    state
   }
 }
 
