@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connectReduxForm } from 'redux-form';
+import Input from '../forms/Input';
 
 let SignInForm = class SignInForm extends Component {
   render() {
@@ -10,12 +11,15 @@ let SignInForm = class SignInForm extends Component {
           <div id="form-div">
             <h2>Sign In</h2>
             <form className="form" id="form1" onSubmit={handleSubmit}>
-              <p className="name">
-                <input type="text" name="name" className="feedback-input" placeholder="Name" id="name" {...name} />
-              </p>
-              <p class="email">
-                <input type="email" name="email" className="feedback-input" id="email" placeholder="Email" {...email} />
-              </p>
+              <Input
+                field={name}
+                placeholder="Name"
+              />
+              <Input
+                field={email}
+                placeholder="Email"
+                type="email"
+              />
               <div class="submit">
                 <button id="button-blue" onClick={handleSubmit} >Submit</button>
                 <div class="ease"></div>
@@ -30,7 +34,6 @@ let SignInForm = class SignInForm extends Component {
 
 SignInForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
-  fields: PropTypes.object.isRequired
 };
 
 SignInForm = connectReduxForm({

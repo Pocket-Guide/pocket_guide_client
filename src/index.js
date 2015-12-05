@@ -12,15 +12,9 @@ import auth from './auth'
 const store = configureStore()
 const history = createBrowserHistory();
 
-function requireAuth(nextState, replaceState) {
-  if (!auth.loggedIn()){
-    replaceState({ nextPathname: nextState.location.pathname }, 'sign_up')
-  }
-}
-
 const routes = (
-  <Route name="app" path="/" component={ App }>
-    <IndexRoute component={Top} onEnter={ requireAuth } />
+  <Route component={ App }>
+    <Route path="/" component={Top} />
     <Route path="/sign_in" component={ AuthenticationPage } />
     <Route path="/sign_up" component={ AuthenticationPage } />
   </Route>

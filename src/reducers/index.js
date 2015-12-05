@@ -1,18 +1,12 @@
 import { combineReducers } from 'redux';
-import {reducer as formReducer} from 'redux-form';
+import { reducer as form } from 'redux-form';
+import current_user from './current_user'
 
 const initialState = {}
 
-function sample(state=initialState, action){
-  switch (action.type) {
-    default:
-      return state
-  }
-}
-
 const rootReducer = combineReducers({
-  sample,
-  form: formReducer
+  current_user,
+  form
 });
 
 export default rootReducer;
