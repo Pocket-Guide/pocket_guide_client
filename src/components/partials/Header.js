@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Header extends Component {
   render(){
@@ -8,8 +9,9 @@ export default class Header extends Component {
         <nav id="nav">
           <ul>
             <li>Home</li>
-            <li><a href="#">My Page</a></li>
-            <li><a href="/tours">Planning</a></li>
+            <li><Link to="#">My Page</Link></li>
+            <li><Link to="/tours">Planning</Link></li>
+            <li><Link to="#" onClick={this.props.deleteOauthToken}>Log Out</Link></li>
           </ul>
         </nav>
       </header>

@@ -1,8 +1,11 @@
 import fetcher from '../fetcher';
-import { POST_OAUTH_TOKEN_SUCCESS, POST_OAUTH_TOKEN_FAILURE, POST_OAUTH_TOKEN_REQUEST } from '../constants/ActionTypes'
+import { POST_OAUTH_TOKEN_SUCCESS,
+        POST_OAUTH_TOKEN_FAILURE,
+        POST_OAUTH_TOKEN_REQUEST,
+        DELETE_OAUTH_TOKEN
+} from '../constants/ActionTypes'
 
 export function postOauthToken(data){
-  console.log(fetcher)
   return dispatch => {
     dispatch(postOauthTokenRequest());
     return fetcher.post('http://localhost:3000/oauth/token', data)
@@ -47,4 +50,10 @@ function postUserSuccess(body) {
 
 function postUserFailure(ex){
 
+}
+
+export function deleteOauthToken(){
+  return {
+    type: DELETE_OAUTH_TOKEN
+  }
 }

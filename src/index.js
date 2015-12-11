@@ -6,6 +6,7 @@ import App from './containers/App';
 import TopPage from './containers/TopPage'
 import Home from './containers/Home'
 import UserOnly from './containers/UserOnly'
+import UserExpecting from './containers/UserExpecting'
 import QuestionsPage from './containers/QuestionsPage'
 import AuthenticationPage from './containers/AuthenticationPage'
 import MakeTourPage from './containers/MakeTourPage'
@@ -23,9 +24,11 @@ const routes = (
       <Route path="/tours" component={MakeTourPage} />
       <Route path="/questions" component={QuestionsPage} />
     </Route>
-    <Route path="/top" component={TopPage} />
-    <Route path="/sign_in" component={ AuthenticationPage } />
-    <Route path="/sign_up" component={ AuthenticationPage } />
+    <Route component={UserExpecting}>
+      <Route path="/top" component={TopPage} />
+      <Route path="/sign_in" component={ AuthenticationPage } />
+      <Route path="/sign_up" component={ AuthenticationPage } />
+    </Route>
   </Route>
 );
 
