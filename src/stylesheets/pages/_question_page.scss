@@ -1,0 +1,106 @@
+#question_page{
+  background-image: url('/assets/images/forest.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 120px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  #question_form{
+    margin: 0 auto;
+    width: 40%;
+    height: 600px;
+    background-color: rgba(225, 225, 225, 0.7);
+    border-radius: 10px;
+    .button_box{
+      text-align: center;
+    }
+    h1{
+      padding-top: 25px;
+      text-align: center;
+    }
+    .choice-forms{
+      text-align: left;
+      padding: 20px 0;
+      font-size: 20px;
+      margin-bottom: 30px;
+      .choice{
+        margin-top:20px;
+        font-size: 120%;
+      }
+    }
+    .btn_question{
+      display: inline-block;
+      margin: 0 15px 0 15px;
+      height: 45px;
+      width: 150px;
+      background-color: #74A847;
+      color: white;
+      border: none;
+      font-size: 20px;
+    }
+
+    input[type=radio] {
+      display: none;
+    }
+
+    .radio {
+      box-sizing: border-box;
+      -webkit-transition: background-color 0.2s linear;
+      transition: background-color 0.2s linear;
+      position: relative;
+      display: block;
+      margin: 0 20px 8px 0;
+      padding: 12px 12px 12px 42px;
+      border-radius: 8px;
+      vertical-align: middle;
+      cursor: pointer;
+      &:hover{
+        min-width: 80%;
+        background-color: #e2edd7;
+        &:after{
+          border-color: #53b300;
+        }
+      }
+      &:after{
+        -webkit-transition: border-color 0.2s linear;
+        transition: border-color 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        display: block;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #696969;
+        border-radius: 6px;
+        content: '';
+      }
+      &:before {
+        -webkit-transition: opacity 0.2s linear;
+        transition: opacity 0.2s linear;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        display: block;
+        margin-top: -5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #53b300;
+        content: '';
+        opacity: 0;
+      }
+      span{
+        margin-left: 10px;
+      }
+    }
+
+    input[type=radio]:checked + .radio:before {
+      opacity: 1;
+    }
+  }
+}
+
+
+
