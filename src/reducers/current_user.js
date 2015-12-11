@@ -8,11 +8,12 @@ const initialState = {
 export default function current_user(state=initialState, action){
   switch(action.type){
   case POST_OAUTH_TOKEN_SUCCESS:
+    console.log(localStorage)
     console.log(action.body.access_token)
     fetcher.setToken(action.body.access_token);
-    localStorage.setItem('access_token', fetcher.token);
+    localStorage.setItem('access_token', fetcher._token);
     return Object.assign({}, state, {
-      access_token: fetcher.token
+      access_token: fetcher._token
     });
   default:
     return state;
