@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class TopHeader extends Component {
   render() {
@@ -8,7 +9,8 @@ export default class TopHeader extends Component {
         <nav id="nav">
           <ul>
             <li>Home</li>
-            <li><a href="#">Sign Up</a></li>
+            <li><Link to="/sign_in">Sign In</Link></li>
+            <li><Link to="/sign_up">Sign Up</Link></li>
           </ul>
         </nav>
       </header>
