@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux';
-
-const initialState = {}
-
-function sample(state=initialState, action){
-  switch(action.type){
-  default:
-    return state
-  }
-}
+import { reducer as form } from 'redux-form';
+import current_user from './current_user';
+import questions from './questions';
+import tour from './tour';
+import step from './step';
+import answers from './answers';
 
 const rootReducer = combineReducers({
-  sample
+  tour,
+  questions,
+  current_user,
+  step,
+  answers,
+  form
 });
 
 export default rootReducer;
