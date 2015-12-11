@@ -7,21 +7,26 @@ export default class Fetcher {
   }
 
   setToken(token) {
-    this.token = token
+    console.log(token)
+    this._token = token
   }
 
   post(url, body){
     return this.process('POST', url, body)
   }
 
+  get (url, parameters) {
+    return this.process('GET', url, null, parameters);
+  }
+
   get headers() {
+    console.log(this._token)
     return {
-      Authorization: `Bearer ${this.token}`,
+      Authorization: `Bearer ${this._token}`,
       Accept: 'application/json',
       'Content-Type': 'application/json'
     }
   }
-
 
 
   process(method, url, body, parameters) {
