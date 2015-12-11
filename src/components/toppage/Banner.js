@@ -8,7 +8,7 @@ export default class Banner extends Component{
         <p>Let's fun to tour</p>
         <ul>
           <li className="sign_up_list"><a href="/sign_up" className="button">Sign Up</a></li>
-          <li><a href="#" className="button">Learn More</a></li>
+          <li><a href="/sign_in" className="button">Sign In</a></li>
         </ul>
       </div>
     );

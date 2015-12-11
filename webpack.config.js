@@ -13,13 +13,17 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      '__DEV__': true
+    })
   ],
   module: {
     loaders:[
       {
         test: /\.js?$/,
         loader: 'babel',
+        include: path.join(__dirname, 'src'),
         exclude: /node_modules/,
       }
     ]

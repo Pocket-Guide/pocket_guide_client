@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connectReduxForm } from 'redux-form';
+import Input from '../forms/Input';
 
-export default class SignInForm extends Component {
+let SignInForm = class SignInForm extends Component {
   render() {
+    const { fields: { name, email }, handleSubmit } = this.props;
     return(
       <div id="banner">
         <div id="form-main">
           <div id="form-div">
             <h2>Sign In</h2>
-            <form className="form" id="form1">
-              <p className="name">
-                <input name="name" type="text" className="feedback-input" placeholder="Name" id="name" />
-              </p>
-              <p class="email">
-                <input name="email" type="text" className="feedback-input" id="email" placeholder="Email" />
-              </p>
+            <form className="form" id="form1" onSubmit={handleSubmit}>
+              <Input
+                field={name}
+                placeholder="Name"
+              />
+              <Input
+                field={email}
+                placeholder="Email"
+                type="email"
+              />
               <div class="submit">
-                <input type="submit" value="SEND" id="button-blue"/>
+                <button id="button-blue" onClick={handleSubmit} >Submit</button>
                 <div class="ease"></div>
               </div>
             </form>
@@ -25,3 +31,14 @@ export default class SignInForm extends Component {
     );
   }
 }
+
+SignInForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+};
+
+SignInForm = connectReduxForm({
+  form: "auth",
+  fields: ['name', 'email'],
+})(SignInForm);
+
+export default SignInForm;
