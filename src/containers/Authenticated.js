@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { deleteOauthToken } from '../actions/users'
+import { bindActionCreators } from 'redux';
 
 export default (Component) => {
   class Authenticated extends Component {
@@ -8,7 +10,7 @@ export default (Component) => {
     }
 
     componentWillUpdate(nextProps) {
-      this.redirectToTop(this.nextProps);
+      this.redirectToTop(nextProps);
     }
 
     redirectToTop(props){
@@ -23,7 +25,14 @@ export default (Component) => {
     return { state };
   }
 
+  function mapDispatchToProps(dispatch) {
+    return {
+      deleteOauthToken: bindActionCreators(deleteOauthToken, dispatch)
+    }
+  }
+
   return connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
   )(Authenticated)
 }

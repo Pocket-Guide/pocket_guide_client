@@ -1,27 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connectReduxForm } from 'redux-form';
+import Input from '../forms/Input';
 
-export default class SignInForm extends Component {
+
+class SignUpForm extends Component {
   render() {
+    const { fields: { name, email, password, password_confirmation }, handleSubmit } = this.props;
     return(
       <div id="banner">
         <div id="form-main">
           <div id="form-div">
             <h2>Sign Up</h2>
             <form className="form" id="form1">
-              <p className="name">
-                <input name="name" type="text" className="feedback-input" placeholder="Name" id="name" />
-              </p>
-              <p class="email">
-                <input name="email" type="text" className="feedback-input" id="email" placeholder="Email" />
-              </p>
-              <p class="password">
-                <input name="password" type="text" className="feedback-input" id="password" placeholder="Password" />
-              </p>
-              <p class="password_confirmation">
-                <input name="password_confirmation" type="text" className="feedback-input" id="password" placeholder="Password Confirmation" />
-              </p>
+              <Input
+                field={name}
+                placeholder="Name"
+              />
+              <Input
+                field={email}
+                placeholder="Email"
+                type="email"
+              />
+              <Input
+                field={password}
+                placeholder="Password"
+                type="password"
+              />
+              <Input
+                field={password_confirmation}
+                placeholder="Password Confirmation"
+                type="password"
+              />
               <div class="submit">
-                <input type="submit" value="SEND" id="button-blue"/>
+                <input type="submit" value="SEND" id="button-blue" onClick={handleSubmit} />
                 <div class="ease"></div>
               </div>
             </form>
@@ -31,3 +42,15 @@ export default class SignInForm extends Component {
     );
   }
 }
+
+
+SignUpForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+};
+
+SignUpForm = connectReduxForm({
+  form: "auth",
+  fields: ['name', 'email', 'password', 'password_confirmation'],
+})(SignUpForm);
+
+export default SignUpForm;

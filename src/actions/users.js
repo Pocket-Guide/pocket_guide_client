@@ -2,7 +2,9 @@ import fetcher from '../fetcher';
 import { POST_OAUTH_TOKEN_SUCCESS,
         POST_OAUTH_TOKEN_FAILURE,
         POST_OAUTH_TOKEN_REQUEST,
-        DELETE_OAUTH_TOKEN
+        DELETE_OAUTH_TOKEN,
+        POST_USER_FAILURE,
+        POST_USER_SUCCESS
 } from '../constants/ActionTypes'
 
 export function postOauthToken(data){
@@ -38,18 +40,26 @@ function postOauthTokenFailure(ex){
 export function postUser(data){
   return dispatch => {
     return fetcher.post("http://localhost:3000/tourists", data)
-          .then(json => dispatch(postUserSuccess(json.body)))
+          .then((json) => {
+            dispatch(postUserSuccess(json.body))
+            return Promise.resolve()
+          })
           .catch(ex => dispatch(postUserFailure(ex)))
   }
 }
 
 function postUserSuccess(body) {
-  type: POST_USER_SUCCESS,
-  body
+  return {
+    type: POST_USER_SUCCESS,
+    body
+  }
 }
 
 function postUserFailure(ex){
-
+  return {
+    type: POST_USER_FAILURE,
+    ex
+  }
 }
 
 export function deleteOauthToken(){

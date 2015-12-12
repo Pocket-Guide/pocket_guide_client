@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Header from '../components/partials/Header'
-import { deleteOauthToken } from '../actions/users'
-import { bindActionCreators } from 'redux';
 import Authenticated from './Authenticated';
 
 
@@ -17,20 +15,6 @@ class UserOnly extends Component {
   }
 }
 
-
-function mapStateToProps(state, ownProps) {
-  return state
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    deleteOauthToken: bindActionCreators(deleteOauthToken, dispatch)
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(UserOnly);
+connect()(UserOnly);
 
 export default Authenticated(UserOnly)

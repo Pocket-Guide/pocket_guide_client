@@ -1,5 +1,5 @@
 import fetcher from '../fetcher';
-import { POST_OAUTH_TOKEN_SUCCESS, DELETE_OAUTH_TOKEN } from '../constants/ActionTypes';
+import { POST_OAUTH_TOKEN_SUCCESS, DELETE_OAUTH_TOKEN} from '../constants/ActionTypes';
 
 const initialState = {
   access_token: localStorage.getItem('access_token')

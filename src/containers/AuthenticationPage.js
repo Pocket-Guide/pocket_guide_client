@@ -13,7 +13,11 @@ class AuthenticationPage extends Component{
   }
 
   handleSignUpSubmit(data) {
+    data.scope = "tourist"
     this.props.postUser(JSON.stringify(data))
+    .then(() => {
+      this.props.history.pushState(null, '/sign_in')
+    })
   }
 
   componentWillUpdate(nextProps){
@@ -26,7 +30,6 @@ class AuthenticationPage extends Component{
 
   redirectToTop(props) {
     const { current_user } = props.state;
-    console.log(current_user.access_token)
     if (current_user.access_token) {
       this.props.history.pushState(null, '/')
     }
