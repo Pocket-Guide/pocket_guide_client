@@ -5,11 +5,11 @@ const initialState = {
   plan: {}
 };
 
-export default function plan(state=initialState, action) {
+export default function plans(state=initialState, action) {
   switch(action.type) {
   case POST_PLAN_SUCCESS:
     return Object.assign({}, state, {
-      tour: action.body
+      plan: action.body
     })
   default:
     return state;
