@@ -6,13 +6,14 @@ import { nextStep, prevStep } from '../actions/step';
 import QuestionInput from '../components/forms/QuestionInput';
 import { preserveAnswer } from '../actions/answers'
 import PlanInput from '../components/forms/PlanInput';
+import { postPlans } from '../actions/plans'
 
 class QuestionsPage extends Component {
   constructor(){
     super()
     this.hello = "hello"
     this.plan = {
-      title: "aaa",
+      title: "",
       answers_attributes: []
     }
   }
@@ -52,6 +53,10 @@ class QuestionsPage extends Component {
     this.plan.title = e.target.value
   }
 
+  handlePlanSubmit(){
+    this.props.postPlans(JSON.stringify(this.plan))
+  }
+
 
   render() {
     let { questions, step } = this.props
@@ -70,7 +75,7 @@ class QuestionsPage extends Component {
           <div className="button_box">
             { step > 0 ? <button className="btn btn-primary btn_question left-button" onClick={this.handlePrevSubmit.bind(this)}> &lt;&lt; Prev</button> : false}
             { step < questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handleNextSubmit.bind(this)}>Next &gt;&gt; </button> : false}
-            { step === questions.length ? <button className="btn btn-primary btn_question right-button">Submit</button> : false}
+            { step === questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handlePlanSubmit.bind(this)}>Submit</button> : false}
           </div>
         </div>
       </div>
@@ -90,6 +95,7 @@ function mapDispatchToProps(dispatch){
     nextStep: bindActionCreators(nextStep, dispatch),
     prevStep: bindActionCreators(prevStep, dispatch),
     preserveAnswer: bindActionCreators(preserveAnswer, dispatch),
+    postPlans: bindActionCreators(postPlans, dispatch)
   }
 }
 
