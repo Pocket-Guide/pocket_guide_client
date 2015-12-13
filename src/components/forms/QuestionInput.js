@@ -8,7 +8,7 @@ export default class QuestionInput extends Component {
       return <Choice choice={choice} question_id={id} />
     })
     return(
-      <div>
+      <div className="quesiton-input">
         <h1>{ content }</h1>
         <div className="choice-forms"  onChange={this.props.handleSubmitChoice}>
           { choiceForms }

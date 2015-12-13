@@ -5,8 +5,17 @@ import { getQuestions } from '../actions/questions';
 import { nextStep, prevStep } from '../actions/step';
 import QuestionInput from '../components/forms/QuestionInput';
 import { preserveAnswer } from '../actions/answers'
+import PlanInput from '../components/forms/PlanInput';
 
 class QuestionsPage extends Component {
+  constructor(){
+    super()
+    this.hello = "hello"
+    this.plan = {
+      title: "aaa",
+      answers_attributes: []
+    }
+  }
   componentDidMount(){
     this.props.getQuestions()
   }
@@ -21,7 +30,28 @@ class QuestionsPage extends Component {
 
   handleSubmitChoice(e){
     const $input = e.target
+    let answers = this.plan.answers_attributes
+    let question_id = $input.dataset.question_id
+    let question_ids = answers.map((answer) => {
+      return answer.question_id
+    })
+    let answer = {
+      question_id: question_id,
+      choice_id: $input.value
+    }
+    if (question_ids.indexOf(question_id) >= 0) {
+      console.log(answer)
+      answers[question_ids.indexOf(question_id)] = answer
+    } else {
+
+      answers.push(answer)
+    }
   }
+
+  handlePlanTitleSubmit(e){
+    this.plan.title = e.target.value
+  }
+
 
   render() {
     let { questions, step } = this.props
@@ -30,15 +60,17 @@ class QuestionsPage extends Component {
         <div id="question_form">
           <form>
             {(() => {
-              if(questions.length > 0){
-                return <QuestionInput question={questions[step]} handleSubmitChoice={this.handleSubmitChoice.bind(this)} />
+              if(questions.length > 0 && step > 0){
+                return <QuestionInput question={questions[step - 1]} handleSubmitChoice={this.handleSubmitChoice.bind(this)} />
+              } else {
+                return <PlanInput handlePlanTitleSubmit={this.handlePlanTitleSubmit.bind(this)} />
               }
             })()}
           </form>
           <div className="button_box">
-            { step > 0 ? <button className="btn btn-primary btn_question" onClick={this.handlePrevSubmit.bind(this)}> &lt;&lt; Prev</button> : false}
-            { step < questions.length - 1 ? <button className="btn btn-primary btn_question" onClick={this.handleNextSubmit.bind(this)}>Next &gt;&gt; </button> : false}
-            { step === questions.length - 1 ? <button className="btn btn-primary btn_question">Submit</button> : false}
+            { step > 0 ? <button className="btn btn-primary btn_question left-button" onClick={this.handlePrevSubmit.bind(this)}> &lt;&lt; Prev</button> : false}
+            { step < questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handleNextSubmit.bind(this)}>Next &gt;&gt; </button> : false}
+            { step === questions.length ? <button className="btn btn-primary btn_question right-button">Submit</button> : false}
           </div>
         </div>
       </div>
