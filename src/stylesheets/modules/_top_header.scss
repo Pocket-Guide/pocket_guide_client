@@ -1,38 +1,36 @@
 #top_header{
-  background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.28) 3%, transparent 100%) repeat scroll 0 0;
   color: white;
   cursor: default;
-  height: 5.5em;
   left: 0;
   position: fixed;
   top: 0px;
   width: 100%;
   line-height: 5em;
-  h1{
-    font-size: 2.5em;
-    position: absolute;
-    height: inherit;
-    left: 1.25em;
-    margin: 0;
-    padding: 0;
-    top: 0.2em;
-    margin-top: 10px;
-  }
-  ul {
-    position: absolute;
-    right: 0;
-    list-style: none;
-    li{
-      font-size: 1.5em;
-      margin-right: 1em;
-      display: inline-block;
-      a {
-        padding: 0.2em 1em;
-        color: white;
-        border-radius: 6px;
-        line-height: 1.95em;
-        height: 1.5em;
-        border: solid 3px #cccccc;
+  color: black;
+  height: 90px;
+  .container{
+    height: 90px;
+    width:  1400px;
+    .logo{
+      font-size: 2em;
+      margin: 0;
+      padding-top: 25px;
+      margin-top: 10px;
+      color: black;
+    }
+    .nav-top{
+      height: 90px;
+      width: 100%;
+      ul {
+        list-style: none;
+        li{
+          height: 50px;
+          font-size: 20px;
+          margin-right: 1em;
+          margin-top: 20px;
+          display: inline-block;
+          color: black;
+        }
       }
     }
   }

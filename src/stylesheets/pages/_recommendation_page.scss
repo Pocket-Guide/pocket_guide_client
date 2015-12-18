@@ -1,0 +1,44 @@
+#recommendation {
+  margin-top: 80px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #eeeeee;
+  .container{
+    width: 1400px;
+    .left-content{
+      margin-top: 100px;
+      text-align: -webkit-center;
+      margin-left: 15px;
+      .google-map-area{
+        padding: 30px 30px 30px 30px;
+        background-color:white;
+        height: 500px;
+        width: 500px;
+        .place-marker{
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          left: -20px;
+          top: -20px;
+          border: 5px solid #f44336;
+          border-radius: 20px;
+          background-color: white;
+          text-align: center;
+          color: #3f51b5;
+          font-size: 16;
+          font-weight: bold;
+          padding: 4px;
+        }
+      }
+    }
+    .right-content{
+      margin-top: 100px;
+      .location-list{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+    }
+  }
+}

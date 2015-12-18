@@ -8,6 +8,7 @@ import Home from './containers/Home'
 import UserOnly from './containers/UserOnly'
 import UserExpecting from './containers/UserExpecting'
 import QuestionsPage from './containers/QuestionsPage'
+import RecommendationPage from './containers/RecommendationPage'
 import AuthenticationPage from './containers/AuthenticationPage'
 import rootReducer from './reducers';
 import { Router, Route, RouteHandler, IndexRoute } from 'react-router';
@@ -21,6 +22,7 @@ const routes = (
     <Route component={UserOnly} >
       <Route path="/" component={Home} />
       <Route path="/plans" component={QuestionsPage} />
+      <Route path="/recommendations" component={RecommendationPage} />
     </Route>
     <Route component={UserExpecting}>
       <Route path="/top" component={TopPage} />

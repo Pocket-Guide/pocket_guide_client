@@ -5,9 +5,11 @@ import questions from './questions';
 import plans from './plans';
 import step from './step';
 import answers from './answers';
+import locations from './locations';
 
 const rootReducer = combineReducers({
   plans,
+  locations,
   questions,
   current_user,
   step,
