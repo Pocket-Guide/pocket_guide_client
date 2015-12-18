@@ -1,0 +1,14 @@
+#top_page{
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/images/fuji.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: white;
+    font-size: 80px;
+  }
+}

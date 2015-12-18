@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-export default class TopHeader extends Component {
+export default class UnauthorizedHeader extends Component {
   render() {
     return(
       <header id="header" class="alt">

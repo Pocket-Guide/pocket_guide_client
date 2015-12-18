@@ -6,7 +6,7 @@ import App from './containers/App';
 import TopPage from './containers/TopPage'
 import Home from './containers/Home'
 import UserOnly from './containers/UserOnly'
-import UserExpecting from './containers/UserExpecting'
+import UserExcepting from './containers/UserExcepting'
 import QuestionsPage from './containers/QuestionsPage'
 import RecommendationPage from './containers/RecommendationPage'
 import AuthenticationPage from './containers/AuthenticationPage'
@@ -22,9 +22,9 @@ const routes = (
     <Route component={UserOnly} >
       <Route path="/" component={Home} />
       <Route path="/plans" component={QuestionsPage} />
-      <Route path="/recommendations" component={RecommendationPage} />
+      <Route path="/plans/:planId/recommendations" component={RecommendationPage} />
     </Route>
-    <Route component={UserExpecting}>
+    <Route component={UserExcepting}>
       <Route path="/top" component={TopPage} />
       <Route path="/sign_in" component={ AuthenticationPage } />
       <Route path="/sign_up" component={ AuthenticationPage } />

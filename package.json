@@ -28,6 +28,7 @@
     "node-bourbon": "^4.2.3",
     "react": "^0.13.3",
     "react-addons-update": "^0.14.3",
+    "react-fullpage": "^0.1.1",
     "react-pure-render": "^1.0.2",
     "react-redux": "^2.1.2",
     "react-router": "^1.0.0-rc4",
@@ -39,6 +40,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "css-loader": "^0.23.0",
     "es6-promise": "^3.0.2",
     "history": "^1.13.0",
     "isomorphic-fetch": "^2.2.0",

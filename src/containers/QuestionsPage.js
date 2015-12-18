@@ -55,6 +55,9 @@ class QuestionsPage extends Component {
 
   handlePlanSubmit(){
     this.props.postPlans(JSON.stringify(this.plan))
+    .then((data)=>{
+      this.props.history.pushState(null, `/plans/${data.id}/recommendations`)
+    })
   }
 
 
@@ -86,7 +89,7 @@ class QuestionsPage extends Component {
 function mapStateToProps(state){
   let { questions } = state.questions
   let { step } = state.step
-  return { questions, step }
+  return { questions, step, state }
 }
 
 function mapDispatchToProps(dispatch){

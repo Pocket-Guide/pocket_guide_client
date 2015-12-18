@@ -4,7 +4,10 @@ import { POST_PLAN_SUCCESS, POST_PLAN_FAILURE } from '../constants/ActionTypes'
 export function postPlans(data) {
   return dispatch => {
     return fetcher.post("http://localhost:3000/current_tourist/me/plans", data)
-          .then(json => dispatch(postPlanSuccess(json.body)))
+          .then((json) => {
+            dispatch(postPlanSuccess(json.body))
+            return Promise.resolve(json.body)
+          })
           .catch(ex => dispatch(postPlanFailure(ex)))
   }
 }
