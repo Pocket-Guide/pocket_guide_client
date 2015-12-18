@@ -1,3 +1,16 @@
+.top_page{
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/images/fuji.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  h2{
+    color: white;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
 #feedback-page{
   text-align:center;
 }
@@ -9,10 +22,8 @@
   position: absolute;
   top: 110px;
   #form-div {
-    background-color:rgba(72,72,72,0.4);
     padding-left:35px;
     padding-right:35px;
-    padding-top:35px;
     padding-bottom:50px;
     width: 450px;
     float: left;
@@ -22,6 +33,7 @@
     margin-left: -260px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    background-color: rgba(0,0,0,0);
     h2{
       font-size: 3em;
       margin-bottom: 40px;
@@ -29,13 +41,14 @@
     }
 
     .feedback-input {
-      color:#3c3c3c;
-      font-family: Helvetica, Arial, sans-serif;
+      color: white;
+      font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
       font-weight:500;
       font-size: 18px;
       border-radius: 0;
       line-height: 22px;
-      background-color: #fbfbfb;
+      background-color: rgba(0,0,0,0);
+      border: 1px solid #cccccc;
       padding: 13px 13px 13px 54px;
       margin-bottom: 10px;
       width:100%;
@@ -47,34 +60,25 @@
     }
 
     .feedback-input:focus{
-      background: #fff;
+      background-color:rgba(0,0,0,0) ;
       box-shadow: 0;
       border: 3px solid #3498db;
-      color: #3498db;
+      color: white;
       outline: none;
       padding: 13px 13px 13px 54px;
     }
 
     .focused{
-      color:#30aed6;
+      color: white;
       border:#30aed6 solid 3px;
     }
 
 
     #name{
-      background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-      background-size: 30px 30px;
-      background-position: 11px 8px;
-      background-repeat: no-repeat;
+      background-color: rgba(0, 0, 0, 0);
+      border: 2px solid #cccccc;
     }
 
-    #name:focus{
-      background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-      background-size: 30px 30px;
-      background-position: 8px 5px;
-      background-position: 11px 8px;
-      background-repeat: no-repeat;
-    }
 
     #email{
       background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
@@ -95,7 +99,7 @@
       width: 100%;
       border: #fbfbfb solid 4px;
       cursor:pointer;
-      background-color: #3498db;
+      background-color: rgba(0,0,0,0);
       color:white;
       font-size:24px;
       padding-top:22px;
@@ -109,10 +113,10 @@
 
     #button-blue:hover{
       background-color: rgba(0,0,0,0);
-      color: #0493bd;
+      color: white;
     }
     .submit:hover {
-      color: #3498db;
+      color: white;
     }
     .ease {
       width: 0px;

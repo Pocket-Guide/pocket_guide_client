@@ -6,7 +6,7 @@ let SignInForm = class SignInForm extends Component {
   render() {
     const { fields: { name, email }, handleSubmit } = this.props;
     return(
-      <div id="banner">
+      <div>
         <div id="form-main">
           <div id="form-div">
             <h2>Sign In</h2>

@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import App from './containers/App';
 import TopPage from './containers/TopPage'
-import Home from './containers/Home'
 import UserOnly from './containers/UserOnly'
 import UserExcepting from './containers/UserExcepting'
 import QuestionsPage from './containers/QuestionsPage'
@@ -20,12 +19,12 @@ const history = createBrowserHistory();
 const routes = (
   <Route component={ App }>
     <Route component={UserOnly} >
-      <Route path="/" component={Home} />
+      <Route path="/" component={TopPage} />
       <Route path="/plans" component={QuestionsPage} />
       <Route path="/plans/:planId/recommendations" component={RecommendationPage} />
     </Route>
     <Route component={UserExcepting}>
-      <Route path="/top" component={TopPage} />
+      <Route path="/home" component={TopPage} />
       <Route path="/sign_in" component={ AuthenticationPage } />
       <Route path="/sign_up" component={ AuthenticationPage } />
     </Route>

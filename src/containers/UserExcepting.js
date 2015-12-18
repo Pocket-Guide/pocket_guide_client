@@ -12,13 +12,7 @@ class UserExcepting extends Component {
     let { current_user } = this.props.state
     return(
       <div id="user_excepting">
-        {(() => {
-          if(!current_user.access_token){
-            return <UnauthorizedHeader />
-          } else {
-            return <AuthorizedHeader />
-          }
-        })()}
+        <UnauthorizedHeader />
         { this.props.children }
       </div>
     )

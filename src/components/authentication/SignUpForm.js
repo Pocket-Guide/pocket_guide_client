@@ -7,7 +7,7 @@ class SignUpForm extends Component {
   render() {
     const { fields: { name, email, password, password_confirmation }, handleSubmit } = this.props;
     return(
-      <div id="banner">
+      <div>
         <div id="form-main">
           <div id="form-div">
             <h2>Sign Up</h2>

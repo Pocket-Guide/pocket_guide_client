@@ -43,7 +43,7 @@ class AuthenticationPage extends Component{
       form = < SignInForm onSubmit={ this.handleSignInSubmit.bind(this) }/>
     }
     return(
-      <div>
+      <div className="top_page">
         { form }
       </div>
     );

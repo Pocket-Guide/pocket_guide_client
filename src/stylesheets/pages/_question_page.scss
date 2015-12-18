@@ -1,5 +1,5 @@
 #question_page{
-  background-image: url('/assets/images/question.png');
+  background-image: url('/assets/images/forest.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 120px;
@@ -16,8 +16,15 @@
       text-align: center;
     }
     h1{
-      padding-top: 25px;
+      font-size: 31px;
+      font-weight: 400;
+      line-height: 130%;
+      letter-spacing: 3px;
+      color: white;
+      font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+      padding-top: 15px;
       text-align: center;
+      color: white;
     }
     .choice-forms{
       text-align: left;
@@ -27,6 +34,11 @@
       .choice{
         margin-top:20px;
         font-size: 120%;
+        label{
+          font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+          color: white;
+          font-weight: 300;
+        }
       }
     }
     .btn_question{
@@ -67,7 +79,7 @@
       cursor: pointer;
       &:hover{
         min-width: 80%;
-        background-color: #e2edd7;
+        background-color: #bbbbbb;
         &:after{
           border-color: #53b300;
         }
@@ -82,7 +94,7 @@
         margin-top: -10px;
         width: 20px;
         height: 20px;
-        border: 2px solid #696969;
+        border: 2px solid #cccccc;
         border-radius: 6px;
         content: '';
       }
@@ -107,7 +119,7 @@
     }
     .tour_content{
       height: 50px;
-      width: 500px;
+      width: 800px;
       font-size: 20px;
       padding-left: 15px;
       margin-top: 50px;
