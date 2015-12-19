@@ -4,11 +4,24 @@
   background-image: url(/assets/images/fuji.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  h1{
-    position: absolute;
-    top: 25%;
-    left: 38%;
-    color: white;
-    font-size: 80px;
+  .content{
+    margin-top: 200px;
+    text-align: center;
+    h1{
+      color: white;
+      font-size: 80px;
+    }
+    p{
+      color: white;
+      font-size: 30px;
+    }
+    .start_link{
+      display: inline-block;
+      margin-top:  30px;
+      padding: 10px 25px;
+      color: white;
+      border: 2px solid white;
+      font-size: 20px;
+    }
   }
 }

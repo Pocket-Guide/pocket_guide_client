@@ -1,30 +1,35 @@
 #top_header{
   border-right: 2px solid white;
   margin-left: auto;
-  position: absolute;
-  right: 80px;
   color: white;
   cursor: default;
   left: 0;
   position: fixed;
-  top: 150px;
-  width: 250px;
+  top: 0px;
+  width: 100%;
   line-height: 5em;
-  max-height: 600px;
+  max-height: 80px;
   text-align: right;
   padding-right: 15px;
   ul{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 35px;
     li{
       list-style: none;
+      line-height: 130%;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      text-align: center;
       a{
-        font-size: 38px;
-        font-weight: 500;
-        line-height: 130%;
-        letter-spacing: 3px;
+        font-size: 18px;
+        font-weight: 300;
         color: white;
         font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+
         &:hover{
           text-decoration: none;
+          border-bottom: 2px solid #cccccc;
           color: #cccccc;
         }
       }

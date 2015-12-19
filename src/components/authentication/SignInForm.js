@@ -9,7 +9,7 @@ let SignInForm = class SignInForm extends Component {
       <div>
         <div id="form-main">
           <div id="form-div">
-            <h2>Sign In</h2>
+            <h2>SIGN IN</h2>
             <form className="form" id="form1" onSubmit={handleSubmit}>
               <Input
                 field={name}

@@ -6,10 +6,10 @@ export default class AuthorizedHeader extends Component {
     return(
       <nav id="top_header">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="#">My Page</Link></li>
-          <li><Link to="/plans">Planning</Link></li>
-          <li><Link to="#" onClick={this.props.deleteOauthToken}>Log Out</Link></li>
+          <li className="col-md-3"><Link to="/">HOME</Link></li>
+          <li className="col-md-3"><Link to="#">MY PAGE</Link></li>
+          <li className="col-md-3"><Link to="/plans">PLANNING</Link></li>
+          <li className="col-md-3"><Link to="#" onClick={this.props.deleteOauthToken}>LOG OUT</Link></li>
         </ul>
       </nav>
     )

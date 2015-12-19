@@ -27,7 +27,7 @@
     padding-bottom:50px;
     width: 450px;
     float: left;
-    left: 50%;
+    left: 53%;
     position: absolute;
     margin-top:30px;
     margin-left: -260px;
@@ -41,12 +41,13 @@
     }
 
     .feedback-input {
+      height: 45px;
       color: white;
       font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
       font-weight:500;
       font-size: 18px;
       border-radius: 0;
-      line-height: 22px;
+      line-height: 32px;
       background-color: rgba(0,0,0,0);
       border: 1px solid #cccccc;
       padding: 13px 13px 13px 54px;
@@ -109,6 +110,8 @@
       transition: all 0.3s;
       margin-top:-4px;
       font-weight:700;
+      height: 60px;
+      line-height: 0px;
     }
 
     #button-blue:hover{

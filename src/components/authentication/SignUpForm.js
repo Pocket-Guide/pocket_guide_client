@@ -10,7 +10,7 @@ class SignUpForm extends Component {
       <div>
         <div id="form-main">
           <div id="form-div">
-            <h2>Sign Up</h2>
+            <h2>SIGN UP</h2>
             <form className="form" id="form1">
               <Input
                 field={name}

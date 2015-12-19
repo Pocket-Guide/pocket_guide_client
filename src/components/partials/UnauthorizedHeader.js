@@ -6,9 +6,9 @@ export default class UnauthorizedHeader extends Component {
     return(
       <nav id="top_header">
         <ul>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/sign_in">Sign In</Link></li>
-          <li><Link to="/sign_up">Sign Up</Link></li>
+          <li><Link to="/home">HOME</Link></li>
+          <li><Link to="/sign_in">SIGN IN</Link></li>
+          <li><Link to="/sign_up">SIGN UP</Link></li>
         </ul>
       </nav>
     );

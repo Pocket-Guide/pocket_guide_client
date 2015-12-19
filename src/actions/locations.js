@@ -1,9 +1,9 @@
 import fetcher from '../fetcher'
 import { FETCH_RECOMMENDED_LOCATIONS_SUCCESS, FETCH_RECOMMENDED_LOCATIONS_FAILURE } from '../constants/ActionTypes'
 
-export function getRecommendedLocatons(){
+export function getRecommendedLocatons(planId){
   return dispatch => {
-    return fetcher.get("http://localhost:3000/current_tourist/me/plans/30/recommendations")
+    return fetcher.get(`http://localhost:3000/current_tourist/me/plans/${planId}/locations`)
           .then(json => dispatch(fetchLocationsSuccess(json.body)))
           .catch(ex => dispatch(fetchLocationsFailure(ex)))
   }
