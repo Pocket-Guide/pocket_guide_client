@@ -7,3 +7,5 @@ class LocationPage extends Component {
     );
   }
 }
+
+export default LocationPage
