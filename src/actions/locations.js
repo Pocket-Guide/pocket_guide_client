@@ -1,5 +1,9 @@
 import fetcher from '../fetcher'
-import { FETCH_RECOMMENDED_LOCATIONS_SUCCESS, FETCH_RECOMMENDED_LOCATIONS_FAILURE } from '../constants/ActionTypes'
+import { FETCH_RECOMMENDED_LOCATIONS_SUCCESS,
+        FETCH_RECOMMENDED_LOCATIONS_FAILURE,
+        FETCH_LOCATION_SUCCESS,
+        FETCH_LOCATION_FAILURE
+         } from '../constants/ActionTypes'
 
 export function getRecommendedLocatons(planId){
   return dispatch => {
@@ -22,3 +26,27 @@ function fetchLocationsFailure(ex){
     ex
   }
 };
+
+
+export function fetchLocation(id){
+  return dispatch => {
+    return fetcher.get(`http://localhost:3000/locations/${id}`)
+          .then(json => dispatch(fetchLocationSuccess(json.body)))
+          .catch(ex => dispatch(fetchLocationFailure(ex)))
+
+  }
+}
+
+function fetchLocationSuccess(body) {
+  return {
+    type: FETCH_LOCATION_SUCCESS,
+    body
+  }
+}
+
+function fetchLocationFailure(ex) {
+  return {
+    type: FETCH_LOCATION_FAILURE,
+    ex
+  }
+}
