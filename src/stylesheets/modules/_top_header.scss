@@ -1,4 +1,5 @@
 #top_header{
+  z-index: 100;
   border-right: 2px solid white;
   margin-left: auto;
   color: white;
@@ -23,14 +24,15 @@
       text-align: center;
       a{
         font-size: 18px;
-        font-weight: 300;
+        font-weight: 700;
         color: white;
         font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+        border-bottom: 3px solid white;
 
         &:hover{
           text-decoration: none;
-          border-bottom: 2px solid #cccccc;
-          color: #cccccc;
+          border-bottom: 3px solid white;
+          color: white;
         }
       }
     }
