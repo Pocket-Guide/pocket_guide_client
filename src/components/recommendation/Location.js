@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 export default class Location extends Component {
   render(){
-    let { name, captured_images } = this.props.location
+    let { id, name, captured_images } = this.props.location
     console.log(captured_images[0].name)
     let { url } = captured_images[0].name
     return(
-      <li>
-        <img src={url} />
-      </li>
+      <Link to={`/locations/${id}`}>
+        <li>
+          <img src={url} />
+        </li>
+      </Link>
     )
   }
 }

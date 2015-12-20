@@ -65,6 +65,7 @@ class QuestionsPage extends Component {
     let { questions, step } = this.props
     return(
       <div id="question_page">
+        <div className="question-image-over"></div>
         <div id="question_form">
           <form>
             {(() => {
