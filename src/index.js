@@ -10,6 +10,7 @@ import QuestionsPage from './containers/QuestionsPage'
 import RecommendationPage from './containers/RecommendationPage';
 import LocationPage from './containers/LocationPage';
 import AuthenticationPage from './containers/AuthenticationPage'
+import ProfilePage from './containers/ProfilePage'
 import rootReducer from './reducers';
 import { Router, Route, RouteHandler, IndexRoute } from 'react-router';
 import auth from './auth'
@@ -24,6 +25,7 @@ const routes = (
       <Route path="/plans" component={QuestionsPage} />
       <Route path="/plans/:planId/recommendations" component={RecommendationPage} />
       <Route path="/locations/:locationId" component={LocationPage} />
+      <Route path="/users/:userId" component={ProfilePage} />
     </Route>
     <Route component={UserExcepting}>
       <Route path="/home" component={TopPage} />

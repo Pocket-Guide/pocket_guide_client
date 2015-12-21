@@ -6,15 +6,17 @@ import Authenticated from './Authenticated';
 
 class UserOnly extends Component {
   render(){
+    let { id } = this.props.current_user
     return(
       <div id="user_only">
-        <AuthorizedHeader deleteOauthToken={this.props.deleteOauthToken} />
+        <AuthorizedHeader deleteOauthToken={this.props.deleteOauthToken} userId={id} />
         { this.props.children }
       </div>
     )
   }
 }
 
-connect()(UserOnly);
+connect(
+)(UserOnly);
 
 export default Authenticated(UserOnly)
