@@ -79,7 +79,7 @@ class QuestionsPage extends Component {
           <div className="button_box">
             { step > 0 ? <button className="btn btn-primary btn_question left-button" onClick={this.handlePrevSubmit.bind(this)}> &lt;&lt; Prev</button> : false}
             { step < questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handleNextSubmit.bind(this)}>Next &gt;&gt; </button> : false}
-            { step === questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handlePlanSubmit.bind(this)}>Submit</button> : false}
+            { step === questions.length ? <button className="btn btn-primary btn_question right-button submit-btn" onClick={this.handlePlanSubmit.bind(this)}>Submit</button> : false}
           </div>
         </div>
       </div>
