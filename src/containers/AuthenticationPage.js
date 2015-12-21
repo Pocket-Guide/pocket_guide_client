@@ -30,6 +30,7 @@ class AuthenticationPage extends Component{
 
   redirectToTop(props) {
     const { current_user } = props.state;
+    console.log(current_user.id)
     if (current_user.access_token) {
       this.props.history.pushState(null, '/')
     }

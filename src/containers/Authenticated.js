@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteOauthToken } from '../actions/users'
 import { bindActionCreators } from 'redux';
+import { getCurrentUser } from '../actions/users'
+
 
 export default (Component) => {
   class Authenticated extends Component {
@@ -13,6 +15,13 @@ export default (Component) => {
       this.redirectToTop(nextProps);
     }
 
+    componentDidMount(){
+      const { current_user } = this.props.state;
+      if (current_user.access_token){
+        this.props.getCurrentUser()
+      }
+    }
+
     redirectToTop(props){
       const { current_user } = props.state;
       if (!current_user.access_token){
@@ -22,12 +31,14 @@ export default (Component) => {
   }
 
   function mapStateToProps(state, ownProps){
-    return { state };
+    let { current_user } = state.current_user
+    return { state, current_user };
   }
 
   function mapDispatchToProps(dispatch) {
     return {
-      deleteOauthToken: bindActionCreators(deleteOauthToken, dispatch)
+      deleteOauthToken: bindActionCreators(deleteOauthToken, dispatch),
+      getCurrentUser: bindActionCreators(getCurrentUser, dispatch)
     }
   }
 
