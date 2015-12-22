@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { fetchLocation } from '../actions/locations'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import  GoogleMaps  from '../components/recommendation/GoogleMaps'
 
 class LocationPage extends Component {
@@ -38,6 +39,9 @@ class LocationPage extends Component {
               </div>
               <div className="location-introduction">
                   { introduction }
+              </div>
+              <div className="bottom-decide-area">
+                <Link to="#">Add My Plan &gt;&gt;</Link>
               </div>
             </div>
           </div>

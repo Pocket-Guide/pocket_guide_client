@@ -1,11 +1,12 @@
 #recommendation {
   height: 100%;
   width: 100%;
+  background-color: #F5F5F5;
   .recommendation_title{
       text-align: center;
       color: white;
       position: absolute;
-      top: 100px;
+      top: 160px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -17,7 +18,7 @@
   .location_main{
     .location_main_pic{
       width: 100%;
-      height: 600px;
+      height: 300px;
     }
   }
   .left-content{
@@ -35,25 +36,86 @@
     }
   }
   .locations_picture{
-    ul{
-      &:after{
-        content: "";
-        clear: both;
+    width: 100%;
+    background-color: #F5F5F5;
+    .location-list{
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 60px;
+      .location-box{
         display: block;
-      }
-      li{
-        display: block;
-        float: left;
-        height: 100%;
-        list-style-type: none;
-        text-align: center;
-        width: 25%;
-        &:after{
-          padding-top: 100%;
-          display: block;
-          content: "";
+        margin-bottom: 15px;
+        height: 200px;
+        .location-list-item{
+          background-color: white;
+          border: 0 solid #c7c7c7;
+          border-width: 0 0 1px;
+          img{
+          margin: auto 0;
+          width: 280px;
+          height: 200px;
+          }
+          h3{
+            color: #323232;
+            font-weight: 200;
+            font-size: 20px;
+            position: absolute;
+            left: 320px;
+            top: 0px;
+            z-index: 100;
+          }
+          .intro-box{
+            max-width: 300px;
+            position: absolute;
+            left: 320px;
+            top: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            color: black;
+            text-overflow: ellipsis;
+          }
+          .decide-btn{
+            position: absolute;
+            left: 450px;
+            bottom: 20px;
+            border-radius: 3px;
+            background-color: #5E6EB5;
+            border: 0 solid #cccccc;
+            border-width: 0 0 1px;
+            a{
+              color: white;
+              padding: 10px;
+              font-size: 18px;
+            }
+          }
+          .detail-btn{
+            position: absolute;
+            left: 320px;
+            bottom: 20px;
+            border-radius: 3px;
+            background-color: #74A847;
+            border: 0 solid #cccccc;
+            border-width: 0 0 1px;
+            a{
+              color: white;
+              padding: 10px;
+              font-size: 18px;
+            }
+          }
         }
       }
+    }
+  }
+  .add-plan-btn{
+    text-align: center;
+    font-size: 18px;
+    width: 200px;
+    background-color: #5E6EB5;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+    a{
+      color: white;
     }
   }
 }

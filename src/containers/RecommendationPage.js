@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import GoogleMaps from '../components/recommendation/GoogleMaps'
 import Location from '../components/recommendation/Location'
+import { Link } from 'react-router'
 
 class RecommendationPage extends Component {
   componentDidMount(){
@@ -22,11 +23,12 @@ class RecommendationPage extends Component {
         <h2 className="recommendation_title">
           Your Recommendation
         </h2>
-        <div className="row locations_picture">
-          <ul>
+        <div className="locations_picture">
+          <div className="row location-list">
             { locationList }
-          </ul>
+          </div>
         </div>
+        <div className="add-plan-btn"><Link to="#">Create My Plan</Link></div>
       </div>
     )
   }
