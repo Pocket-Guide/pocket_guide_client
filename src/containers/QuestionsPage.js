@@ -29,6 +29,7 @@ class QuestionsPage extends Component {
   }
 
   componentDidMount(){
+    this.props.step = 0
     this.props.getQuestions()
   }
 
