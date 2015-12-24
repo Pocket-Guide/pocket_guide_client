@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import { getQuestions } from '../actions/questions';
 import { nextStep, prevStep } from '../actions/step';
 import QuestionInput from '../components/forms/QuestionInput';
+import SelectPrefectureForm from '../components/forms/SelectPrefectureForm';
 import { preserveAnswer } from '../actions/answers'
 import PlanInput from '../components/forms/PlanInput';
 import { postPlans } from '../actions/plans'
+import jpPrefecture from 'jp-prefecture'
 
 class QuestionsPage extends Component {
   constructor(){
@@ -14,10 +16,20 @@ class QuestionsPage extends Component {
     this.hello = "hello"
     this.plan = {
       title: "",
+      prefecture: "",
       answers_attributes: []
     }
+    this.options = jpPrefecture.getAll("pref", ["id", "name"]).map((pref) => {
+      let { id, name } = pref
+      return {
+        label: name,
+        value: id
+      }
+    })
   }
+
   componentDidMount(){
+    this.props.step = 0
     this.props.getQuestions()
   }
 
@@ -60,6 +72,13 @@ class QuestionsPage extends Component {
     })
   }
 
+  handlePrefectureSubmit(e) {
+    console.log(e.target.value)
+    this.plan.prefecture = e.target.value
+    console.log(this.plan)
+  }
+
+
 
   render() {
     let { questions, step } = this.props
@@ -69,17 +88,19 @@ class QuestionsPage extends Component {
         <div id="question_form">
           <form>
             {(() => {
-              if(questions.length > 0 && step > 0){
-                return <QuestionInput question={questions[step - 1]} handleSubmitChoice={this.handleSubmitChoice.bind(this)} />
-              } else {
+              if(questions.length > 0 && step > 1){
+                return <QuestionInput question={questions[step - 2]} handleSubmitChoice={this.handleSubmitChoice.bind(this)} />
+              } else if (step === 0) {
                 return <PlanInput handlePlanTitleSubmit={this.handlePlanTitleSubmit.bind(this)} />
+              } else {
+                return <SelectPrefectureForm options={this.options} handlePrefectureSubmit={this.handlePrefectureSubmit.bind(this)}/>
               }
             })()}
           </form>
           <div className="button_box">
             { step > 0 ? <button className="btn btn-primary btn_question left-button" onClick={this.handlePrevSubmit.bind(this)}> &lt;&lt; Prev</button> : false}
-            { step < questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handleNextSubmit.bind(this)}>Next &gt;&gt; </button> : false}
-            { step === questions.length ? <button className="btn btn-primary btn_question right-button submit-btn" onClick={this.handlePlanSubmit.bind(this)}>Submit</button> : false}
+            { step - 1 < questions.length ? <button className="btn btn-primary btn_question right-button" onClick={this.handleNextSubmit.bind(this)}>Next &gt;&gt; </button> : false}
+            { step - 1 === questions.length ? <button className="btn btn-primary btn_question right-button submit-btn" onClick={this.handlePlanSubmit.bind(this)}>Submit</button> : false}
           </div>
         </div>
       </div>

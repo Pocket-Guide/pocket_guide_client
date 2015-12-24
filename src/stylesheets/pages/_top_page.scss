@@ -1,27 +1,126 @@
-.top_page{
-  height: 100%;
+#top{
   width: 100%;
-  background-image: url(/assets/images/fuji.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  .content{
-    margin-top: 200px;
-    text-align: center;
-    h1{
-      color: white;
-      font-size: 80px;
-    }
-    p{
-      color: white;
-      font-size: 30px;
-    }
-    .start_link{
-      display: inline-block;
-      margin-top:  30px;
-      padding: 10px 25px;
-      color: white;
-      border: 2px solid white;
-      font-size: 20px;
+  height: 100%;
+  .top_page{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/assets/images/fuji.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .content{
+      margin-top: 220px;
+      text-align: center;
+      h1{
+        color: white;
+        font-size: 60px;
+      }
+      p{
+        color: white;
+        font-size: 22px;
+      }
+      .start_link{
+        display: inline-block;
+        margin-top:  30px;
+        padding: 10px 25px;
+        color: white;
+        border: 2px solid white;
+        font-size: 20px;
+      }
     }
   }
+  .arrow{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        margin: -20px 0 0 -20px;
+        padding: 0;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        content: '';
+        font-size: 1px;
+        line-height: 100%;
+        cursor: pointer;
+        -moz-border-radius: 40px;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+        -moz-transform: translateY(70px);
+        -ms-transform: translateY(70px);
+        -webkit-transform: translateY(70px);
+        transform: translateY(70px);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        &:after{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          margin: -4px 0 0 -4px;
+          color: inherit;
+          content: "";
+          font-weight: normal;
+          font-size: 12px;
+          font-family: IcoMoon;
+          line-height: 12px;
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+      }
+  .second-content{
+    height: 50vh;
+    width: 100%;
+    background-color: #F5F5F5;
+    text-align: center;
+    h2{
+      margin-top: 0;
+      padding-top: 110px;
+      padding-bottom: 30px;
+      color: black;
+      font-size: 30px;
+    }
+    p{
+      color: black;
+      font-size: 18px;
+    }
+    .japan{
+      width: 500px;
+      margin-top: 200px;
+      margin-left: 100px;
+    }
+  }
+  .third-content{
+    background-color: white;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    .third-content-box{
+      width: 1080px;
+      margin: 0 auto;
+      height: 100%;
+      text-align: center;
+      h2{
+        margin-top: 0;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        color: black;
+        font-size: 30px;
+      }
+      p{
+        font-size: 18px;
+        margin: 0 auto;
+        width: 300px;
+      }
+    }
+  }
+
 }

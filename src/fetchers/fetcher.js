@@ -19,6 +19,11 @@ export default class Fetcher {
     return this.process('GET', url, null, parameters);
   }
 
+  delete(url, parameters) {
+    return this.process('DELETE', url, null, parameters);
+  }
+
+
   get headers() {
     console.log(this._token)
     return {

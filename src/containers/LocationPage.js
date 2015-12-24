@@ -40,9 +40,6 @@ class LocationPage extends Component {
               <div className="location-introduction">
                   { introduction }
               </div>
-              <div className="bottom-decide-area">
-                <Link to="#">Add My Plan &gt;&gt;</Link>
-              </div>
             </div>
           </div>
         </div>
