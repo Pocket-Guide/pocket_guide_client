@@ -10,13 +10,13 @@
   top: 0px;
   width: 100%;
   line-height: 5em;
-  max-height: 80px;
+  max-height: 50px;
   text-align: right;
   padding-right: 15px;
   ul{
     width: 60%;
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 15px;
     li{
       list-style: none;
       line-height: 130%;
@@ -24,14 +24,14 @@
       margin-bottom: 15px;
       text-align: center;
       a{
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 700;
         color: white;
         font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 
         &:hover{
           text-decoration: none;
-          border-bottom: 3px solid white;
+          border-bottom: 2px solid white;
           color: white;
         }
       }

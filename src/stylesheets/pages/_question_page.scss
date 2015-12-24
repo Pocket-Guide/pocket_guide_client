@@ -17,14 +17,25 @@
   #question_form{
     position: relative;
     margin: 0 auto;
-    width: 40%;
+    width: 35%;
     height: 600px;
     border-radius: 10px;
+    .select-prefecture{
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      height: 50px;
+      width: 200px;
+      border: 3px solid white;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
     .button_box{
       text-align: center;
     }
     h1{
-      font-size: 31px;
+      font-size: 28px;
       font-weight: 400;
       line-height: 130%;
       letter-spacing: 3px;
@@ -60,12 +71,12 @@
       font-size: 20px;
       &.right-button{
         position: absolute;
-        right: 10px;
+        right: 0px;
         bottom: 60px;
       }
       &.left-button{
         position: absolute;
-        left: 10px;
+        left: 0px;
         bottom: 60px;
       }
       &.submit-btn{
@@ -129,9 +140,9 @@
       }
     }
     .tour_content{
-      height: 50px;
-      width: 530px;
-      font-size: 20px;
+      height: 40px;
+      width: 100%;
+      font-size: 16px;
       padding-left: 15px;
       margin-top: 50px;
       border-radius: 15px;

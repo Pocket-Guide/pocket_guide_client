@@ -21,20 +21,7 @@
       height: 300px;
     }
   }
-  .left-content{
-    margin-top: 40px;
-    background-color: rgba(0,0,0,0);
-    position: absolute;
-    height: 400px;
-    width: 300px;
-    top: 40px;
-    left: 48px;
-    color: white;
-    h4{
-      color: white;
-      margin-bottom: 20px;
-    }
-  }
+
   .locations_picture{
     width: 100%;
     background-color: #F5F5F5;
@@ -62,7 +49,7 @@
             position: absolute;
             left: 320px;
             top: 0px;
-            z-index: 100;
+            z-index: 10;
           }
           .intro-box{
             max-width: 300px;
@@ -75,11 +62,27 @@
             text-overflow: ellipsis;
           }
           .decide-btn{
+            cursor: pointer;
             position: absolute;
             left: 450px;
             bottom: 20px;
             border-radius: 3px;
             background-color: #5E6EB5;
+            border: 0 solid #cccccc;
+            border-width: 0 0 1px;
+            a{
+              color: white;
+              padding: 10px;
+              font-size: 18px;
+            }
+          }
+          .decided-btn{
+            position: absolute;
+            cursor: pointer;
+            left: 450px;
+            bottom: 20px;
+            border-radius: 3px;
+            background-color: #F4805B;
             border: 0 solid #cccccc;
             border-width: 0 0 1px;
             a{
@@ -97,6 +100,7 @@
             border: 0 solid #cccccc;
             border-width: 0 0 1px;
             a{
+              cursor: pointer;
               color: white;
               padding: 10px;
               font-size: 18px;
@@ -116,6 +120,93 @@
     padding: 10px;
     a{
       color: white;
+    }
+  }
+  .modal-window{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    z-index: 150;
+    .modal-panel{
+      position: absolute;
+      width: 60%;
+      height: 70%;
+      left: calc(50% - 30vw);
+      top: calc(50% - 33vh);
+      padding: 5px 10px;
+      border: 1px solid #eee;
+      background: #fff;
+      z-index: 200;
+
+      #location-page{
+        height: 100%;
+        width: 100%;
+        .location-contents{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          .table-location{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: flex-start;
+            .location-title{
+              margin: 0 auto;
+              h2{
+                color: black;
+              }
+            }
+            .bottom-content{
+              display: flex;
+              width: 100%;
+              flex-direction: row;
+              justify-content: center;
+              align-items: flex-start;
+              position: relative;
+              .left-content{
+                .location-image-content{
+                  padding-top: 25px;
+                  padding-left: 20px;
+                  display: table-cell;
+                  width: 600px;
+                }
+                .google-map{
+                  width: 600px;
+                  height: 350px;
+                  padding-top: 15px;
+                  padding-left: 20px;
+                  padding-bottom: 20px;
+                }
+              }
+              .location-introduction{
+                display: table-cell;
+                color: white;
+                font-size: 18px;
+                width: 600px;
+                line-height: 1.6em;
+                padding: 20px;
+                color: black;
+              }
+              .bottom-decide-area{
+                position: absolute;
+                bottom: 40px;
+                font-size: 24px;
+                right: 60px;
+                color: white;
+                a{
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
