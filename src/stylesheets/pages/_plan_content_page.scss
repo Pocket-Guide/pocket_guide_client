@@ -1,0 +1,178 @@
+#plan-locations{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+  .locations-table{
+    margin-top: 130px;
+    h1{
+      margin-bottom: 20px;
+    }
+    .table{
+      text-align: left;
+      font-size: 18px;
+      .tbody{
+        .table-row{
+          border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+          .table-head{
+          }
+          .table-data{
+            width: 85%;
+            text-align: center;
+            margin: 0 auto;
+            display:block;
+          }
+          padding-bottom: 10px;
+          margin-bottom: 30px;
+        }
+        .location-box{
+          position: relative;
+          display: block;
+          margin-bottom: 15px;
+          height: 200px;
+          .location-list-item{
+            background-color: white;
+            border: 0 solid #c7c7c7;
+            border-width: 0 0 1px;
+            img{
+            margin: auto 0;
+            width: 280px;
+            height: 200px;
+            }
+            h3{
+              color: #323232;
+              font-weight: 200;
+              font-size: 20px;
+              position: absolute;
+              left: 320px;
+              top: 0px;
+              z-index: 100;
+            }
+            .intro-box{
+              max-width: 60%;
+              position: absolute;
+              left: 320px;
+              top: 50px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+              color: black;
+              text-overflow: ellipsis;
+            }
+            .detail-btn{
+              position: absolute;
+              left: 320px;
+              bottom: 20px;
+              border-radius: 3px;
+              background-color: #74A847;
+              border: 0 solid #cccccc;
+              border-width: 0 0 1px;
+              a{
+                cursor: pointer;
+                color: white;
+                padding: 10px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .location-list{
+          .location-title{
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    h1{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .modal-window{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    z-index: 150;
+    .modal-panel{
+      position: absolute;
+      width: 60%;
+      height: 70%;
+      left: calc(50% - 30vw);
+      top: calc(50% - 33vh);
+      padding: 5px 10px;
+      border: 1px solid #eee;
+      background: #fff;
+      z-index: 200;
+
+      #location-page{
+        height: 100%;
+        width: 100%;
+        .location-contents{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          .table-location{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: flex-start;
+            .location-title{
+              margin: 0 auto;
+              h2{
+                color: black;
+              }
+            }
+            .bottom-content{
+              display: flex;
+              width: 100%;
+              flex-direction: row;
+              justify-content: center;
+              align-items: flex-start;
+              position: relative;
+              .left-content{
+                .location-image-content{
+                  padding-top: 25px;
+                  padding-left: 20px;
+                  display: table-cell;
+                  width: 600px;
+                }
+                .google-map{
+                  width: 600px;
+                  height: 350px;
+                  padding-top: 15px;
+                  padding-left: 20px;
+                  padding-bottom: 20px;
+                }
+              }
+              .location-introduction{
+                display: table-cell;
+                color: white;
+                font-size: 18px;
+                width: 600px;
+                line-height: 1.6em;
+                padding: 20px;
+                color: black;
+              }
+              .bottom-decide-area{
+                position: absolute;
+                bottom: 40px;
+                font-size: 24px;
+                right: 60px;
+                color: white;
+                a{
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
