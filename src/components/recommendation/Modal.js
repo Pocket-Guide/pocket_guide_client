@@ -4,7 +4,8 @@ import GoogleMaps from './GoogleMaps';
 export default class Modal extends Component {
   render(){
     let { closeModal, preventEvent, location} = this.props
-    let { name, introduction, url } = location
+    console.log(this.props)
+    let { name, introduction, url, latitude, longitude } = location
     return(
       <div className="modal-window" onClick={closeModal}>
         <div className="modal-panel" onClick={preventEvent}>
@@ -18,7 +19,7 @@ export default class Modal extends Component {
                   <div className="left-content">
                     <img src={ url } className="location-image-content" width="100%" height="100%" />
                     <div className="google-map">
-                      <GoogleMaps />
+                      <GoogleMaps latitude={latitude} longitude={longitude} />
                     </div>
                   </div>
                   <div className="location-introduction">

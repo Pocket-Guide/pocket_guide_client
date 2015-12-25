@@ -12,18 +12,19 @@ export default class GoogleMaps extends Component {
   }
 
   render() {
+    let { latitude, longitude } = this.props
     return (
        <GoogleMap
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}>
-        <PlaceIndication lat={59.955413} lng={30.337844} />
+        <PlaceIndication lat={latitude} lng={longitude} />
       </GoogleMap>
     );
   }
 }
 
 GoogleMaps.defaultProps ={
-    center: {lat: 59.938043, lng: 30.337157},
-    zoom: 9,
-    greatPlaceCoords: {lat: 59.724465, lng: 30.080121}
+    center: {lat: 35.681382, lng: 139.766084},
+    zoom: 12,
+    greatPlaceCoords: {lat: 35.681382, lng: 139.766084}
 }
