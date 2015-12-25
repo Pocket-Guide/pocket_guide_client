@@ -9,9 +9,9 @@ export default class PlaceIndication extends Component {
 
   render() {
     return (
-       <div className="place-marker">
-
-       </div>
+      <div className="place-marker">
+        {this.props.text}
+      </div>
     );
   }
 }

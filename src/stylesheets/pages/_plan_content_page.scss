@@ -99,9 +99,9 @@
     .modal-panel{
       position: absolute;
       width: 60%;
-      height: 70%;
+      height: 80%;
       left: calc(50% - 30vw);
-      top: calc(50% - 33vh);
+      top: calc(50% - 38vh);
       padding: 5px 10px;
       border: 1px solid #eee;
       background: #fff;
@@ -136,15 +136,16 @@
               align-items: flex-start;
               position: relative;
               .left-content{
+                margin-left: 30px;
                 .location-image-content{
                   padding-top: 25px;
                   padding-left: 20px;
                   display: table-cell;
-                  width: 600px;
+                  width: 450px;
                 }
                 .google-map{
-                  width: 600px;
-                  height: 350px;
+                  width: 450px;
+                  height: 250px;
                   padding-top: 15px;
                   padding-left: 20px;
                   padding-bottom: 20px;

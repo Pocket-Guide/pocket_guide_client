@@ -25,7 +25,9 @@
   .locations_picture{
     width: 100%;
     background-color: #F5F5F5;
+    text-align: center;
     .location-list{
+      text-align: left;
       width: 80%;
       margin: 0 auto;
       margin-top: 60px;
@@ -117,6 +119,8 @@
     background-color: #5E6EB5;
     margin: 0 auto;
     margin-top: 15px;
+    display: inline-block;
+    margin-bottom: 30px;
     padding: 10px;
     a{
       color: white;
@@ -133,9 +137,9 @@
     .modal-panel{
       position: absolute;
       width: 60%;
-      height: 70%;
+      height: 80%;
       left: calc(50% - 30vw);
-      top: calc(50% - 33vh);
+      top: calc(50% - 38vh);
       padding: 5px 10px;
       border: 1px solid #eee;
       background: #fff;
@@ -170,6 +174,7 @@
               align-items: flex-start;
               position: relative;
               .left-content{
+                margin-left: 30px;
                 .location-image-content{
                   padding-top: 25px;
                   padding-left: 20px;

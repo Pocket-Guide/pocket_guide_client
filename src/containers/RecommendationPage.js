@@ -41,8 +41,11 @@ class RecommendationPage extends Component {
     this.location ={
       name: dataset.name,
       introduction: dataset.introduction,
-      url: dataset.url
+      url: dataset.url,
+      latitude: dataset.latitude,
+      longitude: dataset.longitude
     }
+    console.log(this.location)
   }
 
   closeModal(){
@@ -56,6 +59,7 @@ class RecommendationPage extends Component {
   render() {
     let locationList = this.props.locations.map((location, index) => {
       if (location.status === 0){
+        console.log(location)
         return <Location location={location}
                 index={index}
                 handleSubmit={this.handleAssociateLocation.bind(this)}
@@ -85,8 +89,8 @@ class RecommendationPage extends Component {
           <div className="row location-list">
             { locationList }
           </div>
+          <div className="add-plan-btn"><Link to={`/plans/${planId}`} onClick={this.handleCreatePlan.bind(this)}>Create My Plan</Link></div>
         </div>
-        <div className="add-plan-btn"><Link to={`/plans/${planId}`} onClick={this.handleCreatePlan.bind(this)}>Create My Plan</Link></div>
         {(()=> {
           if (this.state.modalIsOpen) {
             return <Modal closeModal={this.closeModal.bind(this)} preventEvent={this.preventEvent.bind(this)} location={this.location} />
