@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { getQuestions } from '../actions/questions';
-import { nextStep, prevStep } from '../actions/step';
+import { nextStep, prevStep, resetStep } from '../actions/step';
 import QuestionInput from '../components/forms/QuestionInput';
 import SelectPrefectureForm from '../components/forms/SelectPrefectureForm';
 import { preserveAnswer } from '../actions/answers'
@@ -29,8 +29,12 @@ class QuestionsPage extends Component {
   }
 
   componentDidMount(){
-    this.props.step = 0
     this.props.getQuestions()
+    this.props.resetStep()
+  }
+
+  componentWillMount(){
+    this.props.resetStep()
   }
 
   handleNextSubmit(){
@@ -120,7 +124,8 @@ function mapDispatchToProps(dispatch){
     nextStep: bindActionCreators(nextStep, dispatch),
     prevStep: bindActionCreators(prevStep, dispatch),
     preserveAnswer: bindActionCreators(preserveAnswer, dispatch),
-    postPlans: bindActionCreators(postPlans, dispatch)
+    postPlans: bindActionCreators(postPlans, dispatch),
+    resetStep: bindActionCreators(resetStep, dispatch)
   }
 }
 

@@ -1,6 +1,7 @@
 import {
   NEXT_STEP,
-  PREV_STEP
+  PREV_STEP,
+  RESET_STEP
 } from '../constants/ActionTypes'
 
 const initialState = {
@@ -14,6 +15,8 @@ export default function step(state=initialState, action) {
     return {step: step + 1}
   case PREV_STEP:
     return {step: step - 1}
+  case RESET_STEP:
+    return {step: 0}
   default:
     return state
   }
