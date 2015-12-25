@@ -9,7 +9,7 @@ class ProfilePage extends Component {
   }
   render(){
     return(
-      <div>Profile</div>
+      <div id="profile">Profile</div>
     )
   }
 }

@@ -23,7 +23,6 @@ export default function current_user(state=initialState, action){
     });
   case GET_CURRENT_USER_SUCCESS:
     fetcher.setToken(state.access_token);
-    console.log(state.access_token)
     return Object.assign({}, state, {
       current_user: action.body
     })
