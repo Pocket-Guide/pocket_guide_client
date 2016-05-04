@@ -8,7 +8,7 @@ export default class Location extends Component {
     let { handleSubmit, index, text, cssName, openModal } = this.props
     let { url } = captured_images[0].name
     return(
-      <div className="col-md-6 location-box">
+      <div className="location-box col-md-8 col-md-offset-2">
         <div className="location-list-item">
           <img src={url} />
           <h3>{name}</h3>

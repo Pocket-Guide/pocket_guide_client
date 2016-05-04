@@ -22,7 +22,9 @@ class PlanContentPage extends Component {
     this.location ={
       name: dataset.name,
       introduction: dataset.introduction,
-      url: dataset.url
+      url: dataset.url,
+      longitude: dataset.longitude,
+      latitude: dataset.latitude
     }
   }
 

@@ -8,7 +8,7 @@ export default class TopPage extends Component{
         <div className="top_page">
           <div className="content col-md-6 col-md-offset-3">
             <h1>Pocket Guide</h1>
-            <p>We recommend your Japan travel Plan</p>
+            <p>We recommend your Japanese travel Plan</p>
             <Link to="/plans" className="start_link">Get Started</Link>
           </div>
         </div>

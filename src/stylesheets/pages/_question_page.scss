@@ -63,21 +63,21 @@
     .btn_question{
       display: inline-block;
       margin: 0 15px 0 15px;
-      height: 45px;
-      width: 150px;
+      height: 35px;
+      width: 100px;
       background-color: #74A847;
       color: white;
       border: none;
-      font-size: 20px;
+      font-size: 16px;
       &.right-button{
         position: absolute;
         right: 0px;
-        bottom: 60px;
+        bottom: 120px;
       }
       &.left-button{
         position: absolute;
         left: 0px;
-        bottom: 60px;
+        bottom: 120px;
       }
       &.submit-btn{
         background-color: #5E6EB5;
@@ -141,7 +141,7 @@
     }
     .tour_content{
       height: 40px;
-      width: 100%;
+      width: 95%;
       font-size: 16px;
       padding-left: 15px;
       margin-top: 50px;

@@ -30,44 +30,46 @@
       text-align: left;
       width: 80%;
       margin: 0 auto;
-      margin-top: 60px;
+      margin-top: 40px;
       .location-box{
         display: block;
+        height: 160px;
         margin-bottom: 15px;
-        height: 200px;
         .location-list-item{
           background-color: white;
           border: 0 solid #c7c7c7;
           border-width: 0 0 1px;
           img{
           margin: auto 0;
-          width: 280px;
-          height: 200px;
+          width: 240px;
+          height: 160px;
           }
           h3{
             color: #323232;
             font-weight: 200;
-            font-size: 20px;
+            font-size: 18px;
             position: absolute;
-            left: 320px;
+            left: 290px;
             top: 0px;
             z-index: 10;
           }
           .intro-box{
             max-width: 300px;
             position: absolute;
-            left: 320px;
+            left: 290px;
             top: 50px;
             overflow: hidden;
-            white-space: nowrap;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
             color: black;
             text-overflow: ellipsis;
           }
           .decide-btn{
             cursor: pointer;
             position: absolute;
-            left: 450px;
-            bottom: 20px;
+            left: 400px;
+            bottom: 10px;
             border-radius: 3px;
             background-color: #5E6EB5;
             border: 0 solid #cccccc;
@@ -75,14 +77,14 @@
             a{
               color: white;
               padding: 10px;
-              font-size: 18px;
+              font-size: 14px;
             }
           }
           .decided-btn{
             position: absolute;
             cursor: pointer;
-            left: 450px;
-            bottom: 20px;
+            left: 400px;
+            bottom: 10px;
             border-radius: 3px;
             background-color: #F4805B;
             border: 0 solid #cccccc;
@@ -90,13 +92,13 @@
             a{
               color: white;
               padding: 10px;
-              font-size: 18px;
+              font-size: 14px;
             }
           }
           .detail-btn{
             position: absolute;
-            left: 320px;
-            bottom: 20px;
+            left: 290px;
+            bottom: 10px;
             border-radius: 3px;
             background-color: #74A847;
             border: 0 solid #cccccc;
@@ -105,7 +107,7 @@
               cursor: pointer;
               color: white;
               padding: 10px;
-              font-size: 18px;
+              font-size: 14px;
             }
           }
         }
@@ -180,6 +182,7 @@
                   padding-left: 20px;
                   display: table-cell;
                   width: 450px;
+                  height: 300px;
                 }
                 .google-map{
                   width: 450px;
@@ -192,7 +195,7 @@
               .location-introduction{
                 display: table-cell;
                 color: white;
-                font-size: 18px;
+                font-size: 12px;
                 width: 600px;
                 line-height: 1.6em;
                 padding: 20px;

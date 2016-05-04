@@ -1,4 +1,4 @@
-  import fetcher from '../fetcher';
+import fetcher from '../fetcher';
 import { POST_OAUTH_TOKEN_SUCCESS, DELETE_OAUTH_TOKEN, GET_CURRENT_USER_SUCCESS} from '../constants/ActionTypes';
 
 const initialState = {

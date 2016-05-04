@@ -9,7 +9,16 @@ class ProfilePage extends Component {
   }
   render(){
     return(
-      <div id="profile">Profile</div>
+      <div id="profile">
+        <div className="container">
+          <div className="introduction">
+            <div className="row">
+              <div className="col-md-4">Name</div>
+              <div className="col-md-8">Jun Yamada</div>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   }
 }

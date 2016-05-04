@@ -8,7 +8,7 @@ if(process) {
     setItem(key, value){
       this[key] = value;
       return;
-    },
+    }
     removeItem(key){
       this[key] = null;
       return;
